@@ -13,7 +13,9 @@ Managing credit card statements manually across multiple banks is tedious. This 
 3. **Transform** — Standardizes data into a clean, structured format
 4. **Visualize** — Loads data into a Power BI dashboard for interactive analysis
 
-Covers **6 years of statement history (2021–2026)** across two banks, processing **187 PDF files** (99 HDFC + 88 IDFC).
+Covers statement history (2021–2025) across two banks, processing **187 PDF files** (99 HDFC + 88 IDFC).
+
+> **Note on data privacy:** The Power BI dashboard and sample data in this repository use **modified amounts** — exact credit card figures have been altered and 2026 data has been excluded intentionally to avoid exposing real personal financial information. The pipeline logic and structure are fully representative of the actual implementation.
 
 ---
 
@@ -230,6 +232,8 @@ This project handles sensitive financial data. The following measures are in pla
 | Processing logs (`logs/`) | Excluded — may contain account metadata |
 | Power BI files (`*.pbix`, `*.xlsx`) | Excluded — contain real financial data |
 | Notebook outputs | `.ipynb_checkpoints/` excluded; outputs cleared before committing |
+| Sample data amounts | Modified/anonymized — do not reflect real credit card usage |
+| 2026 data | Excluded entirely from the repository |
 
 **Before pushing to GitHub:**
 - Run `git status` to confirm no `.env`, PDF files, or data folders are staged
